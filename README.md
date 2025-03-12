@@ -57,7 +57,7 @@ We provide well-trained weights on the public Kvasir dataset, which can be downl
 
 
 ### - Testing
-Before running the tests, ensure an object detection model is ready. For this project, we utilize the YOLOv5l architecture. Pre-trained weights, optimized on the Kvasir dataset, can be downloaded from the following link: （这里放置目标检测预训练权重链接）,Place the weights in the `Detection_model` folder and set the `"state"` parameter of `modelConfig` in `Main.py` to `"eval"`.
+Before running the tests, ensure an object detection model is ready. For this project, we utilize the YOLOv5l architecture. Pre-trained weights, optimized on the Kvasir dataset, can be downloaded from the [link](),Place the weights in the `Detection_model` folder and set the `"state"` parameter of `modelConfig` in `Main.py` to `"eval"`.
 
 ```bash
 python Main.py
