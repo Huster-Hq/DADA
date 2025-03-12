@@ -1,33 +1,32 @@
 <div align="center">
-<h1>Targeted False Positive Synthesis via Detector-guided Adversarial Diffusion Attacker for Robust Polyp Detection</h3>
+<h1>Targeted False Positive Synthesis via Detector-guided Adversarial Diffusion Attacker for Robust Polyp Detection</h1>
+</div>
 
 
 ## Overview
-In this paper, we tackle the challenge of false positives in polyp detection by proposing a novel **targeted false positive synthesis method**. Unlike existing approaches that primarily focus on enhancing polyp diversity, our method emphasizes generating **high-value negative samples** to improve the quality of training data for polyp detectors. To achieve this, we design an innovative **adversarial diffusion framework** that integrates a background denoiser and a detector-guided adversarial diffusion attacker.
-
-The proposed approach consists of two core components: First, the **Background-only Denoiser (BG-De)**, a diffusion-based generator trained to focus exclusively on learning diverse background patterns by masking polyp regions during training. Second, the **Detector-guided Adversarial Diffusion Attacker (DADA)**, which perturbs the denoising process to generate challenging false positives capable of confusing a well-trained polyp detector, thereby guiding the synthesis of high-value negative samples.
-
-This work is the first to apply adversarial diffusion to lesion detection, establishing a new paradigm for **targeted false positive generation**. Extensive experiments on the public **Kvasir dataset** and an in-house dataset demonstrate significant improvements in F1-score for state-of-the-art detection models such as YOLO and DETR, achieving at least **2.6% and 2.7% enhancements**, respectively.
-
-Our method provides a new perspective for building more robust and reliable polyp detection systems, effectively reducing false positives and enhancing the clinical applicability of colorectal cancer screening.
+To tackle the challenge of polyp detectors easy to produce false positive prediction, this work firstly (to the best of our knowledge) to apply adversarial diffusion framwork to generate ***high-value negative samples*** (e.g., polyp-like interferences, light spots, circular lumens and and other background objects).
+The core module is ***Detector-guided Adversarial Diffusion Attacker (DADA)***, which perturbs the denoising process to generate challenging false positives capable of confusing a well-trained polyp detector, thereby guiding the synthesis of high-value negative samples.
+The negative samples synthesized by our method can improve the performance of the detector more than other data data synthesis methods.
 
 <p align="center">
-    <img src="figs/overview.jpg"/> <br />
-</p>
-## Performance on Kvasir and In-house
-
-### 1. Quantitative Comparisons
-<p align="center">
-    <img src="figs/fig3.png"/> <br />
-</p>
-### 2. Qualitative Comparisons
-<p align="center">
-    <img src="figs/fig2.jpg"/> <br />
+    <img src="figs/overview.jpg"/ width=800> <br />
 </p>
 
 
+## Experimental Results
+### 1. Comparison with State-of-the-arts
+### - Quantitative Comparisons
+<p align="center">
+    <img src="figs/fig3.png"/ width=800> <br />
+</p>
 
-## Quick start
+### - Qualitative Comparisons
+<p align="center">
+    <img src="figs/fig2.jpg"/ width=800> <br />
+</p>
+
+
+## Usage
 #### 1. Install dependencies.
 ```bash
 cd DADA
