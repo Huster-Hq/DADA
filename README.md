@@ -26,16 +26,21 @@ The negative samples synthesized by our method can improve the performance of th
 </p>
 
 
-## Usage
+## Quick Start
 #### 1. Install dependencies.
 ```bash
 cd DADA
 pip install -r requirements.txt
 ```
 
+#### 2. Data synthesis
+xxx
+
+
+## Training
 #### 2. Prepare the datasets for BG-De.
 Please place the dataset you want to train in the path `./datasets` and ensure that the size of the images and masks is 256. The path structure should be as follows:
-```none
+```
   DADA
   ├── datasets
   │   ├── images
@@ -43,17 +48,15 @@ Please place the dataset you want to train in the path `./datasets` and ensure t
 ```
 
 #### 3.Train your own BG-De.
-
-Please set the `"state"` parameter of modelConfig in `Main.py` to `"train"`, And set parameters such as batch_size according to actual conditions, Place the weights in the `BG-De_model` folder.
-
+Please set the `"state"` parameter of modelConfig in `Main.py` to `"train"`, and set parameters such as batch_size according to actual conditions.
 ```
 python Main.py
 ```
+Place the weights in the `BG-De_model` folder.
+We provide well-trained weights on the public Kvasir dataset, which can be downloaded via this [link]().
 
-We provide pre-trained weights on the kvasir dataset, which can be downloaded from the following link:（这里放置预训练好的BG-De权重链接）.
 
 ### - Testing
-
 Before running the tests, ensure an object detection model is ready. For this project, we utilize the YOLOv5l architecture. Pre-trained weights, optimized on the Kvasir dataset, can be downloaded from the following link: （这里放置目标检测预训练权重链接）,Place the weights in the `Detection_model` folder and set the `"state"` parameter of `modelConfig` in `Main.py` to `"eval"`.
 
 ```bash
@@ -61,5 +64,5 @@ python Main.py
 ```
 
 ## Acknowledgments
-Thanks [DenoisingDiffusionProbabilityModel](https://github.com/zoubohao/DenoisingDiffusionProbabilityModel-ddpm-) for implementing an efficient DDPM and using it as the base method in this work.
+We acknowledge the outstanding open-source contributions from [DDPM](https://github.com/zoubohao/DenoisingDiffusionProbabilityModel-ddpm-), [YOLOv5](https://github.com/ultralytics/yolov5), and [DETR](https://github.com/facebookresearch/detr).
 
