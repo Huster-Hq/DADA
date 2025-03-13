@@ -46,16 +46,26 @@ pip install -r requirements.txt
 We provide well-trained BG-De weights based on the public Kvasir dataset, which can be downloaded from this [link](https://drive.google.com/file/d/18_8oLJduhYCx7lbAsfmh6HbS4ZEkQY9C/view?usp=drive_link), . Please place the weights in the `BG-De_model` folder.
 
 Additionally, we also offer YOLOv5l weights trained on the public Kvasir dataset, which can be downloaded from this [link](https://drive.google.com/file/d/1hfs5trwjaZXrCVflEZstlHSiioMQJEp4/view?usp=drive_link). Please place the weights in the `Detection_model` folder.
+```
+  DADA
+  ├── BG-De_model
+  ├── Detection_model
+```
 
+After completing the above steps, you can generate negative samples by simply running `Main.py`:
 ```
 python Main.py
 ```
 
+Please note that we adopt a inpainting strategy: firstly you should have a real endoscopy image; secondly you need to specify a inpainting region (a bounding box region); and finally, our method can generate a high-value negative sample in the region you have formulated in this real image. As shown in the below image: 
+<p align="center">
+    <img src="figs/fig2.jpg"/ width=800> <br />
+</p>
 
 
 
 ## Training
-#### 2. Prepare the datasets for BG-De.
+#### 1. Prepare the datasets for BG-De.
 Please place the dataset you want to train in the path `./datasets` and ensure that the size of the images and masks is 256. The path structure should be as follows:
 ```
   DADA
@@ -64,7 +74,7 @@ Please place the dataset you want to train in the path `./datasets` and ensure t
   │   ├── masks
 ```
 
-#### 3.Train your own BG-De.
+#### 2.Train your own BG-De.
 Please set the `"state"` parameter of modelConfig in `Main.py` to `"train"`, and set parameters such as batch_size according to actual conditions.
 ```
 python Main.py
