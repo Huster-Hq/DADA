@@ -27,6 +27,14 @@ The negative samples synthesized by our method can improve the performance of th
 
 
 ## Quick Start
+
+### - Preliminaries
+
+- Python 3.8+
+- PyTorch 2.2+ 
+- TorchVision corresponding to the PyTorch version
+- NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-11-7-0-download-archive)
+
 #### 1. Install dependencies.
 ```bash
 cd DADA
@@ -34,7 +42,16 @@ pip install -r requirements.txt
 ```
 
 #### 2. Data synthesis
-xxx
+
+We provide well-trained BG-De weights based on the public Kvasir dataset, which can be downloaded from this [link](), . Please place the weights in the `BG-De_model` folder.
+
+Additionally, we also offer YOLOv5l weights trained on the public Kvasir dataset, which can be downloaded from this [link](). Please place the weights in the `Detection_model` folder.
+
+```
+python Main.py
+```
+
+
 
 
 ## Training
@@ -53,11 +70,10 @@ Please set the `"state"` parameter of modelConfig in `Main.py` to `"train"`, and
 python Main.py
 ```
 Place the weights in the `BG-De_model` folder.
-We provide well-trained weights on the public Kvasir dataset, which can be downloaded via this [link]().
 
 
 ### - Testing
-Before running the tests, ensure an object detection model is ready. For this project, we utilize the YOLOv5l architecture. Pre-trained weights, optimized on the Kvasir dataset, can be downloaded from the [link](),Place the weights in the `Detection_model` folder and set the `"state"` parameter of `modelConfig` in `Main.py` to `"eval"`.
+Before running the tests, ensure an object detection model is ready. For this project, we utilize the YOLOv5l architecture. Place the weights in the `Detection_model` folder and set the `"state"` parameter of `modelConfig` in `Main.py` to `"eval"`.
 
 ```bash
 python Main.py
