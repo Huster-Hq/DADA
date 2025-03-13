@@ -4,6 +4,14 @@
 
 
 ## Overview
+### 1. Inference Flow
+In our work, we adopt a inpainting strategy and the specific inference flow is: **Firstly** you should have a real endoscopy image; **Secondly** you need to specify a inpainting region (a bounding box region); and **Finally**, our method can generate a high-value negative sample in the region you have formulated in this real image. To make it clear, we've made a GIF, which is shown as follows:
+<p align="center">
+    <img src="figs/inference.gif"/ width=800> <br />
+</p>
+
+
+### 2. Introduction
 To tackle the challenge of polyp detectors easy to produce false positive prediction, this work firstly (to the best of our knowledge) to apply adversarial diffusion framwork to generate ***high-value negative samples*** (e.g., polyp-like interferences, light spots, circular lumens and and other background objects).
 The core module is ***Detector-guided Adversarial Diffusion Attacker (DADA)***, which perturbs the denoising process to generate challenging false positives capable of confusing a well-trained polyp detector, thereby guiding the synthesis of high-value negative samples.
 The negative samples synthesized by our method can improve the performance of the detector more than other data data synthesis methods.
@@ -56,12 +64,6 @@ After completing the above steps, you can generate negative samples by simply ru
 ```
 python Main.py
 ```
-
-Please note that we adopt a inpainting strategy: firstly you should have a real endoscopy image; secondly you need to specify a inpainting region (a bounding box region); and finally, our method can generate a high-value negative sample in the region you have formulated in this real image. As shown in the below image: 
-<p align="center">
-    <img src="figs/fig2.jpg"/ width=800> <br />
-</p>
-
 
 
 ## Training
