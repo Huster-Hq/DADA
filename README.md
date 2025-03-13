@@ -43,9 +43,9 @@ pip install -r requirements.txt
 
 #### 2. Data synthesis
 
-We provide well-trained BG-De weights based on the public Kvasir dataset, which can be downloaded from this [link](), . Please place the weights in the `BG-De_model` folder.
+We provide well-trained BG-De weights based on the public Kvasir dataset, which can be downloaded from this [link](https://drive.google.com/file/d/18_8oLJduhYCx7lbAsfmh6HbS4ZEkQY9C/view?usp=drive_link), . Please place the weights in the `BG-De_model` folder.
 
-Additionally, we also offer YOLOv5l weights trained on the public Kvasir dataset, which can be downloaded from this [link](). Please place the weights in the `Detection_model` folder.
+Additionally, we also offer YOLOv5l weights trained on the public Kvasir dataset, which can be downloaded from this [link](https://drive.google.com/file/d/1hfs5trwjaZXrCVflEZstlHSiioMQJEp4/view?usp=drive_link). Please place the weights in the `Detection_model` folder.
 
 ```
 python Main.py
