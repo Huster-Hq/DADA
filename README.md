@@ -106,10 +106,10 @@ We acknowledge the outstanding open-source contributions from [DDPM](https://git
 If you find our paper and code useful in your research, please consider giving us a star ⭐ and citing SALI by the following BibTeX entry.
 
 ```
-@article{hu2025holistic,
-  title={Holistic White-light Polyp Classification via Alignment-free Dense Distillation of Auxiliary Optical Chromoendoscopy},
-  author={Hu, Qiang and Wang, Qimei and Chen, Jia and Ji, Xuantao and Li, Qiang and Wang, Zhiwei},
-  journal={arXiv preprint arXiv:2505.19319},
+@article{zhou2025targeted,
+  title={Targeted False Positive Synthesis via Detector-guided Adversarial Diffusion Attacker for Robust Polyp Detection},
+  author={Zhou, Quan and Luo, Gan and Hu, Qiang and Zhang, Qingyong and Zhang, Jinhua and Tian, Yinjiao and Li, Qiang and Wang, Zhiwei},
+  journal={arXiv preprint arXiv:2506.18134},
   year={2025}
 }
 ```
