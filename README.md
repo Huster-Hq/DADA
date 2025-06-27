@@ -103,7 +103,7 @@ python Main.py
 We acknowledge the outstanding open-source contributions from [DDPM](https://github.com/zoubohao/DenoisingDiffusionProbabilityModel-ddpm-), [YOLOv5](https://github.com/ultralytics/yolov5), and [DETR](https://github.com/facebookresearch/detr).
 
 ## Citation
-If you find our paper and code useful in your research, please consider giving us a star ⭐ and citing SALI by the following BibTeX entry.
+If you find our paper and code useful in your research, please consider giving us a star ⭐ and citing dada by the following BibTeX entry.
 
 ```
 @article{zhou2025targeted,
