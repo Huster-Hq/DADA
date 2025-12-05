@@ -106,11 +106,13 @@ We acknowledge the outstanding open-source contributions from [DDPM](https://git
 If you find our paper and code useful in your research, please consider giving us a star ⭐ and citing DADA by the following BibTeX entry.
 
 ```
-@article{zhou2025targeted,
-  title={Targeted False Positive Synthesis via Detector-guided Adversarial Diffusion Attacker for Robust Polyp Detection},
+@inproceedings{zhou2025targeted,
+  title={Targeted False Positive Synthesis via Detector-Guided Adversarial Diffusion Attacker for Robust Polyp Detection},
   author={Zhou, Quan and Luo, Gan and Hu, Qiang and Zhang, Qingyong and Zhang, Jinhua and Tian, Yinjiao and Li, Qiang and Wang, Zhiwei},
-  journal={arXiv preprint arXiv:2506.18134},
-  year={2025}
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={593--602},
+  year={2025},
+  organization={Springer}
 }
 ```
 
